@@ -60,7 +60,7 @@ def draw_box_plot():
     df_box = df_box.sort_values('month_num')
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8))
-    sns.boxplot(ax=ax1, x='year', y= 'value', data= df_box)
+    sns.boxplot(x='year', y= 'value', data= df_box, ax=ax1)
 
     ax1.set_title('Year-wise Box Plot (Trend)')
     ax1.set_xlabel('Year')
